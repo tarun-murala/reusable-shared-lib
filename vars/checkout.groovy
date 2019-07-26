@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-def checkout() {
+def call() {
     stage('checkout git') {
         steps {
             scm checkout
