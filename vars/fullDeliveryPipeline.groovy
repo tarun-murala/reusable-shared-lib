@@ -4,11 +4,6 @@ def call() {
     pipeline {
         agent any
         stages {
-            stage('checkout') {
-                steps {
-                    scm checkout
-                }
-            }
 
             stage('build') {
                 steps {
