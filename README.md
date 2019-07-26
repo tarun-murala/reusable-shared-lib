@@ -1,1 +1,1 @@
-# shared-jenkins-pipeline-lib
+# dumm-scripted-pipeline
