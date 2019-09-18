@@ -1,4 +1,6 @@
 node {
+    def mvn_version = 'M3'
+
     // Git checkout before load source the file
     stage('checkout git') {
         checkout scm

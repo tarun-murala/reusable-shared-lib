@@ -1,12 +1,16 @@
 #!/usr/bin/env groovy
 def build() {
     stage('build') {
-        sh '${mvnHome}/bin/mvn clean package -DskipTests=true'
+        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+            sh 'mvn clean install -DskipTests'
+        }
     }
 }
 def test() {
     stage ('test') {
-        sh '${mvnHome}/bin/mvn test -Dpublish'
+        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+            sh 'mvn test -Dpublish'
+        }
     }
 }
 
