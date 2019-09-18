@@ -1,7 +1,7 @@
 node {
     // Git checkout before load source the file
     stage('checkout git') {
-        scm checkout
+        checkout scm
     }
 
     // To know files are checked out or not
