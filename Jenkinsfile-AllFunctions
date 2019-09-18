@@ -1,8 +1,0 @@
-@Library("jenkins-shared-libraries@release")
-
-import com.allfunctions.*;
-pl = new pipeline()
-
-pl.build()
-pl.test()
-pl.deploy()
