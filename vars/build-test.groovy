@@ -1,4 +1,5 @@
 #!/usr/bin/env groovy
+def mvn_version = 'M3'
 def build() {
     stage('build') {
         withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
