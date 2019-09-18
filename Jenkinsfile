@@ -1,7 +1,10 @@
-def pipeline
 node {
     // Git checkout before load source the file
-    checkout scm
+    stage('checkout git') {
+        steps {
+            scm checkout
+        }
+    }
 
     // To know files are checked out or not
     sh '''
@@ -13,12 +16,6 @@ node {
 
     // point to exact source file
     def buildTest = load "${rootDir}/vars/build-test.groovy"
-
-    stage('checkout git') {
-        steps {
-            scm checkout
-        }
-    }
     buildTest.build()
     buildTest.test()
 }
