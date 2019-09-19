@@ -8,12 +8,12 @@ def build() {
     }
 }
 def test() {
-    // stage ('test') {
+    stage ('test') {
     //     withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
     //         sh 'mvn test -Dpublish'
     //     }
-    // }
     sleep 10;
+    }
 }
 
 return this
